@@ -1,0 +1,43 @@
+# Java & Maven
+target/
+*.jar
+*.war
+*.ear
+*.class
+*.log
+hs_err_pid*
+!src/main/resources/
+!src/test/resources/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Playwright & Node.js temporary files
+**/playwright-java-*
+node_modules/
+package-lock.json
+npm-debug.log
+yarn.lock
+
+# Cucumber reports
+test-output/
+cucumber-reports/
+target/cucumber-reports/
+
+# Playwright Tracing & Screenshots
+trace.zip
+screenshots/
+videos/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs & Debugging
+logs/
+*.log
+debug.log
