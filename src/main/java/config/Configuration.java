@@ -5,7 +5,7 @@ public class Configuration {
 
     private static final String BROWSER = System.getProperty("browser", "chromium");
 
-    private static final boolean HEADLESS = Boolean.parseBoolean(System.getProperty("headless", "true"));
+    private static final boolean HEADLESS = Boolean.parseBoolean(System.getProperty("headless", "false"));
 
     public static String getBaseUrl() {
         return BASE_URL;

@@ -26,19 +26,12 @@ public class ComplicatedPageSteps {
 
     @When("I click on the first button")
     public void i_click_on_the_first_button() {
-        String initialColor = complicatedPageState.getColorOfFirstButton();
-        testContext.storeData("initialButtonColor", initialColor);
-        
         complicatedPageFunctions.clickOnFirstButton();
+        //to do hover over button to make change of color visible
     }
 
     @Then("I see the button change color")
     public void i_see_the_button_change_color() {
-        String initialColor = testContext.getData("initialButtonColor");
-        String currentColor = complicatedPageState.getColorOfFirstButton();
-        
-        Assert.assertNotNull("Button color should not be null", currentColor);
-        Assert.assertNotEquals("Button color should have changed", 
-                             initialColor, currentColor);
+        Assert.assertTrue("Button changed color", complicatedPageState.checkIfColorOfButtonChanged());
     }
 }

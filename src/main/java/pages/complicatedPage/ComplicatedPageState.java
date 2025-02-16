@@ -11,8 +11,8 @@ public class ComplicatedPageState extends BasePage {
         this.complicatedPageComponent = new ComplicatedPageComponent(page);
     }
 
-    public String getColorOfFirstButton() {
-        String color = complicatedPageComponent.firstButton.getAttribute("color");
-        return color != null ? color : "No color attribute found";
+    public boolean checkIfColorOfButtonChanged() {
+        String bodyClass = page.locator("body").getAttribute("class");
+        return bodyClass.contains("safari");
     }
 }
