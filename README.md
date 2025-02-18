@@ -1,6 +1,6 @@
 # Playwright Test Automation Framework
 
-A modern, robust test automation framework built with Playwright, Cucumber, and Java, following best practices and design patterns.
+A modern, robust test automation framework built with Playwright, Cucumber, and Java, following best practices and design patterns. Work in progress!
 
 ## 🏗 Architecture
 
