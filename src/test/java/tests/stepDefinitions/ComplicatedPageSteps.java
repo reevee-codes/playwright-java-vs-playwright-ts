@@ -11,10 +11,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ComplicatedPageSteps {
     private final ComplicatedPageFunctions complicatedPageFunctions;
     private final ComplicatedPageState complicatedPageState;
-    private final TestContext testContext;
 
     public ComplicatedPageSteps(TestContext testContext) {
-        this.testContext = testContext;
         this.complicatedPageFunctions = new ComplicatedPageFunctions(testContext.getPage());
         this.complicatedPageState = new ComplicatedPageState(testContext.getPage());
     }
