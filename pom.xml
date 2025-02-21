@@ -19,7 +19,7 @@
         <playwright.version>1.43.0</playwright.version>
         <junit.jupiter.version>5.9.2</junit.jupiter.version>
         <cucumber.version>7.15.0</cucumber.version>
-
+        <assertj.version>3.27.3</assertj.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
     </properties>
@@ -29,6 +29,11 @@
             <groupId>com.microsoft.playwright</groupId>
             <artifactId>playwright</artifactId>
             <version>${playwright.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

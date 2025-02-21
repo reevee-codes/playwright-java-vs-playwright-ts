@@ -17,7 +17,7 @@ public class ComplicatedPageFunctions extends BasePage {
         waitForPageLoad();
     }
 
-    public void clickOnFirstButton() {
-        complicatedPageComponent.firstButton.click();
+    public void hoverOverFirstButton() {
+        complicatedPageComponent.firstButton.hover();
     }
 }

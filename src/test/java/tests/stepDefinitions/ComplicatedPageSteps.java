@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import pages.complicatedPage.ComplicatedPageFunctions;
 import pages.complicatedPage.ComplicatedPageState;
 import tests.context.TestContext;
-import org.junit.Assert;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ComplicatedPageSteps {
     private final ComplicatedPageFunctions complicatedPageFunctions;
@@ -24,14 +24,15 @@ public class ComplicatedPageSteps {
         complicatedPageFunctions.navigate();
     }
 
-    @When("I click on the first button")
-    public void i_click_on_the_first_button() {
-        complicatedPageFunctions.clickOnFirstButton();
-        //to do hover over button to make change of color visible
+    @When("I hover over the first button")
+    public void i_hover_over_the_first_button() {
+        complicatedPageFunctions.hoverOverFirstButton();
     }
 
     @Then("I see the button change color")
     public void i_see_the_button_change_color() {
-        Assert.assertTrue("Button changed color", complicatedPageState.checkIfColorOfButtonChanged());
+        assertThat(complicatedPageState.checkIfColorOfButtonChanged())
+                .withFailMessage("Title on first top deals element is not displayed")
+                .isTrue();
     }
 }

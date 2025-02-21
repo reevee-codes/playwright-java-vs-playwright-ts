@@ -20,7 +20,6 @@ public class Hooks {
     @After
     public void afterScenario(Scenario scenario) {
         if (scenario.isFailed()) {
-            // Take screenshot
             byte[] screenshot = testContext.getPage().screenshot();
             scenario.attach(screenshot, "image/png", "Screenshot");
         }
