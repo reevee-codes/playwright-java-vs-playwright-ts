@@ -1,5 +1,6 @@
 package tests.stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -31,6 +32,34 @@ public class ComplicatedPageSteps {
     public void i_see_the_button_change_color() {
         assertThat(complicatedPageState.checkIfColorOfButtonChanged())
                 .withFailMessage("Title on first top deals element is not displayed")
+                .isTrue();
+    }
+
+    @When("I enter text into name field")
+    public void iEnterTextIntoNameField() {
+        complicatedPageFunctions.enterTextIntoNameField();
+    }
+
+    @And("I enter text into email field")
+    public void iEnterTextIntoEmailField() {
+        complicatedPageFunctions.enterTextIntoEmailField();
+
+    }
+
+    @And("I enter text into message field")
+    public void iEnterTextIntoMessageField() {
+        complicatedPageFunctions.enterTextIntoMessageField();
+    }
+
+    @And("I enter incorrect text into captcha calculation field")
+    public void iEnterIncorrectTextIntoCaptchaCalculationField() {
+        complicatedPageFunctions.enterValueIntoCaptchaCalculationField(9);
+    }
+
+    @Then("I see the {string} message")
+    public void iSeeTheMessage(String message) {
+        assertThat(complicatedPageState.checkIfMessageAppeared(message))
+                .withFailMessage(String.format("Message %s did not appear", message))
                 .isTrue();
     }
 }

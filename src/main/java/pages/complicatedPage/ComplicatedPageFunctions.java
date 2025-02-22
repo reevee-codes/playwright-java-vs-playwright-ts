@@ -20,4 +20,16 @@ public class ComplicatedPageFunctions extends BasePage {
     public void hoverOverFirstButton() {
         complicatedPageComponent.firstButton.hover();
     }
+
+    public void enterTextIntoNameField() {
+    }
+
+    public void enterTextIntoEmailField() {
+    }
+
+    public void enterTextIntoMessageField() {
+    }
+
+    public void enterValueIntoCaptchaCalculationField(int i) {
+    }
 }

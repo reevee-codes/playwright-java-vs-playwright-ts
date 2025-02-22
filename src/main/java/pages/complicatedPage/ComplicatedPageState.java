@@ -31,4 +31,7 @@ public class ComplicatedPageState extends BasePage {
             throw new ElementNotFoundException("Failed to check button color change: " + e.getMessage());
         }
     }
+
+    public boolean checkIfMessageAppeared(String message) {
+    }
 }
