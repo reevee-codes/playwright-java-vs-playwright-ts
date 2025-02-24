@@ -33,5 +33,7 @@ public class ComplicatedPageState extends BasePage {
     }
 
     public boolean checkIfMessageAppeared(String message) {
+        return true;
+        //to implement
     }
 }
