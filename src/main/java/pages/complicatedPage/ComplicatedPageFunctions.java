@@ -31,5 +31,6 @@ public class ComplicatedPageFunctions extends BasePage {
     }
 
     public void enterValueIntoCaptchaCalculationField(int i) {
+        //to be implemented
     }
 }
