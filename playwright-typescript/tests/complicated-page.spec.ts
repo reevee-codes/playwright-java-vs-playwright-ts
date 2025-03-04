@@ -11,18 +11,14 @@ test.describe('Complicated Page Tests', () => {
   let config: Configuration;
 
   test.beforeEach(async ({ page }) => {
-    // Initialize components
     complicatedPageFunctions = new ComplicatedPageFunctions(page);
     complicatedPageState = new ComplicatedPageState(page);
     context = TestContext.getInstance();
     config = Configuration.getInstance();
-
-    // Navigate to complicated page
     await page.goto('https://ultimateqa.com/complicated-page');
   });
 
   test.afterEach(async () => {
-    // Clear test context
     context.clear();
   });
 

@@ -5,10 +5,8 @@ export class Configuration {
   private config: { [key: string]: string } = {};
 
   private constructor() {
-    // Load environment variables
     dotenv.config();
 
-    // Set default configuration
     this.config = {
       baseUrl: process.env.BASE_URL || 'http://localhost:3000',
       browser: process.env.BROWSER || 'chromium',

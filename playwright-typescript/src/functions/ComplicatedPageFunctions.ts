@@ -5,8 +5,10 @@ import { TestContext } from '../core/TestContext';
 export class ComplicatedPageFunctions {
   private complicatedPageComponent: ComplicatedPageComponent;
   private context: TestContext;
+  private page: Page;
 
   constructor(page: Page) {
+    this.page = page;
     this.complicatedPageComponent = new ComplicatedPageComponent(page);
     this.context = TestContext.getInstance();
   }
@@ -20,7 +22,7 @@ export class ComplicatedPageFunctions {
   async checkButtonColorChange(): Promise<boolean> {
     const initialColor = await this.complicatedPageComponent.getButtonColor();
     await this.complicatedPageComponent.hoverOverButton();
-    await this.page.waitForTimeout(500); // Small wait for color transition
+    await this.page.waitForTimeout(500);
     const newColor = await this.complicatedPageComponent.getButtonColor();
     
     const hasColorChanged = initialColor !== newColor;
