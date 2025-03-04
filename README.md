@@ -143,3 +143,29 @@ mvn test -DbaseUrl=https://staging.ultimateqa.com -Dbrowser=firefox -Dheadless=t
 2. Add appropriate unit tests
 3. Update documentation
 4. Follow code style guidelines
+
+## �� Running Tests
+
+Now you can run the tests in several ways:
+
+1. Run all tests in headless mode:
+```bash
+npm test
+```
+
+2. Run tests in headed mode (browser visible):
+```bash
+npm run test:headed
+```
+
+3. Run tests with Playwright UI mode (interactive):
+```bash
+npm run test:ui
+```
+
+4. Run tests in debug mode:
+```bash
+npm run test:debug
+```
+
+Let's try running the tests in headed mode so you can see what's happening:
