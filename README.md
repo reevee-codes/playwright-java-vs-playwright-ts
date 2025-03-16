@@ -13,7 +13,7 @@ A modern, robust test automation framework built with Playwright, Cucumber, and 
 
 2. **Singleton Pattern**
     - Used in Configuration management
-    - Ensures single instance of test context per thread
+    - Ensures single instance of test context per thread.
 
 3. **Factory Pattern**
     - Browser and page initialization
